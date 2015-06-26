@@ -1,15 +1,12 @@
-window.React = require('react');
+React = require('react');
 var CourseData = require('./CourseData');
 var CourseAPI = require('./utils/CourseAPI');
-var FluxCartApp = require('./components/NovaCourseApp.react');
-
+var CourseScheduleApp = require('./components/CourseScheduleApp');
 
 CourseData.init();
-
-CourseApi.getProductData();
-
+CourseAPI.getCourseData();
 
 React.render(
-        <NovaCourseApp />
-        document.getElementById('nova-course-app');
+    <CourseScheduleApp />,
+    document.getElementById('course-schedule-app')
 );
